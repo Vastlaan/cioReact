@@ -1,23 +1,56 @@
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {ContainerNarrow} from './styles'
+import Navigation from './components/navigation';
+import Footer from './components/footer';
+import LandingPage from './pages/landing_page';
+import SupportPage from './pages/support_page'
+import SurveyPage from './pages/survey_page'
+import InsturctionsPage from './pages/instructions_page';
+import HealthyHacks from './pages/healthy_hacks_page'
+import EmergencyPage from './pages/emergency_page';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <ContainerNarrow>
+        <BrowserRouter>
+
+          <Navigation/>
+
+          
+            <Switch>
+
+              <Route path='/' exact>
+                <LandingPage />
+              </Route>
+
+              <Route path='/survey'>
+                <SurveyPage />
+              </Route>
+
+              <Route path='/healthy-hacks'>
+                <HealthyHacks />
+              </Route>
+
+              <Route path='/support'>
+                <SupportPage />
+              </Route>
+
+              <Route path='/instructions'>
+                <InsturctionsPage />
+              </Route>
+
+              <Route path='/emergency'>
+                <EmergencyPage />
+              </Route>
+
+            </Switch>
+
+          <Footer />
+          
+        </BrowserRouter>
+      </ContainerNarrow>
     </div>
   );
 }

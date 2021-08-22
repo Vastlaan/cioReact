@@ -1,0 +1,16 @@
+.footer{
+  width: 100%;
+  padding: 4.7rem 1.4rem;
+  background-color: var(--color-grey-3);
+}
+
+.footer > h1{
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+@media only screen and (min-width: 768px){
+  .footer{
+    padding: 4.7rem 2.7rem;
+  }
+}
