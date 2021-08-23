@@ -33,8 +33,45 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on
 
 ## How to run on local machine
 
+### you need nodejs (npm) installed on your local machine, for more info go to: https://nodejs.org/en/download/
+
 ### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+## How to run in the docker container locally
+
+**You need Docker installed on local machine**
+
+**Mac OS** more info: https://docs.docker.com/desktop/mac/install/
+
+If you try the option 1 for running container you must have also docker hub account
+
+**Sign in to Docker Hub account here: https://hub.docker.com/signup**
+
+### Development
+
+#### Option 1: From docker hub (you must have docker account - read above)
+docker pull noirfatale/andhealth:dev
+
+docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true noirfatale/andhealth:dev
+
+#### Option 2: build localy
+
+docker build -t andhealth:dev .
+
+docker run -it --rm -v ${PWD}:/app -v /app/node_modules -p 3001:3000 -e CHOKIDAR_USEPOLLING=true andhealth:dev
+
+### Production
+
+#### Option 1: From docker hub (you must have docker account - read above)
+docker pull noirfatale/andhealth:prod
+
+docker run -it --rm -p 1337:80 noirfatale/andhealth:prod
+
+#### Option 2: build localy
+
+docker build -f Dockerfile.prod -t andhealth:prod .
+
+docker run -it --rm -p 1337:80 andhealth:prod
