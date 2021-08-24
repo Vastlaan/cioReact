@@ -35,6 +35,8 @@ https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on
 
 ### you need nodejs (npm) installed on your local machine, for more info go to: https://nodejs.org/en/download/
 
+### `npm install`
+
 ### `npm start`
 
 Runs the app in the development mode.\

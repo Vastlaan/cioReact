@@ -6,7 +6,8 @@ import "./styles.css"
 export default function FooterComponent() {
   return (
     <footer className='footer'>
-      <h1>This is footer</h1>
+      <h1>2021 AND Digital - Privacy — Terms</h1>
+      <h2>We accelerate digital capabilities</h2>
     </footer>
   )
 }

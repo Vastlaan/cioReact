@@ -22,6 +22,8 @@ export const GlobalStyles = createGlobalStyle`
 
     --color-tertiary: #A050FF;
 
+    --color-green: #65c32a;
+
     --color-grey-1: #FAFAFA;
     --color-grey-2: #ddd;
     --color-grey-3: #323232;

@@ -20,7 +20,37 @@ export const ButtonPrimary = styled.button`
 `
 
 export const ButtonRound = styled.button`
-  
+  margin: ${p=>p.margin?p.margin: "0"};
+  background-color: ${p=>p.backgroundColor?p.backgroundColor:'white'};
+  display: flex;
+  align-items: center;
+  color: ${p=>p.color?p.color:'var(--color-primary)'};
+  padding: 1.9rem 2.7rem;
+  border-radius: 5rem;
+  border: 3px solid ${p=>p.backgroundColor?p.backgroundColor:'white'};
+
+  font-size: ${p=>p.fontSize?p.fontSize:"1.9rem"};
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all .3s;
+
+  svg{
+    background-color: ${p=>p.color?p.color:'var(--color-primary)'};
+    color: ${p=>p.backgroundColor?p.backgroundColor:'white'};
+    font-size: 3.7rem;
+    padding: 0px 3px;
+    border-radius: 50%;
+    margin-left: .9rem;
+  }
+
+  &:hover{
+    background-color: transparent;
+    color: ${p=>p.backgroundColor?p.backgroundColor:'white'};
+
+    svg{
+      background-color: transparent;
+    }
+  }
 `
 
 export const ButtonPlane = styled.button`
