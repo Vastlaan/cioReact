@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import respond from './respond'
-import {fonts} from './fonts'
+import respond from "./respond";
+import { fonts } from "./fonts";
 
 export const GlobalStyles = createGlobalStyle`
   @keyframes slide{
@@ -22,11 +22,11 @@ export const GlobalStyles = createGlobalStyle`
 
     --color-tertiary: #A050FF;
 
-    --color-green: #65c32a;
+    --color-green: #2a9d8f;
 
     --color-grey-1: #FAFAFA;
     --color-grey-2: #ddd;
-    --color-grey-3: #323232;
+    --color-grey-3: #919191;
     --color-grey-4: #222;
   }
 

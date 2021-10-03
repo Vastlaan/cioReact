@@ -1,16 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import {Link} from 'react-router-dom'
-import {fonts} from '../../styles'
+import React from "react";
+import styled from "styled-components";
+import { fonts } from "../../styles";
+import LogoImage from "../../img/logo_and_digital.jpg";
 
 export default function LogoComponent() {
   return (
     <Logo>
-      <Link to="/">
-        <h1><span>AND</span>Health</h1>
-      </Link>
+      <a href="https://and.digital">
+        <img src={LogoImage} alt="logo AND Digital" />
+      </a>
     </Logo>
-  )
+  );
 }
 const Logo = styled.div`
   display; flex;
@@ -31,4 +31,4 @@ const Logo = styled.div`
       margin-right: 3px;
     }
   }
-`
+`;

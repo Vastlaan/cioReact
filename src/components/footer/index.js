@@ -1,13 +1,17 @@
-import React from 'react'
-import "./styles.css"
+import React from "react";
+import styled from "styled-components";
+import Copyright from "./copyright";
 
 // this component is styled with normal CSS (as an example)
 
 export default function FooterComponent() {
   return (
-    <footer className='footer'>
-      <h1>2021 AND Digital - Privacy — Terms</h1>
-      <h2>We accelerate digital capabilities</h2>
-    </footer>
-  )
+    <Footer>
+      <Copyright />
+    </Footer>
+  );
 }
+
+const Footer = styled.footer`
+  background-color: var(--color-primary);
+`;

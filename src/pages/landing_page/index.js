@@ -1,27 +1,29 @@
-import React from 'react'
-import Header from '../../components/header'
-import Cards from '../../components/cards'
-import Motivation from '../../components/motivation'
-import ImageHeader from '../../img/header-2.jpg'
+import React, { useContext } from "react";
+import { Context } from "../../store";
+import Header from "../../components/header";
+import Download from "../../components/download";
+import Motivation from "../../components/motivation";
+import ImageHeader from "../../img/header-2.jpg";
 
 export default function LandingPage() {
+  const [state] = useContext(Context);
+
+  const { pageData } = state;
+
   return (
     <>
       <Header
-        title={`Health Survey`}
-        description={`Here goes some catchy description of what is it for and how
-        it will serve the one who fill this survey as well as whole company in general. Also mention that it is annonymous.`}
-        btnLink='/survey'
-        btnText='Start Survey'
+        title={pageData.landing_header_title}
+        category={pageData.landing_header_category}
+        description={pageData.landing_header_description}
+        btnLink={pageData.landing_header_btn_link}
+        btnText={pageData.landing_header_btn_text}
         image={ImageHeader}
       />
 
-      <Cards />
+      <Download />
 
-      <Motivation
-        text={`Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        Nam, porro ipsum. Aliquam dolorum veritatis facilis repellat consectetur ut odit nihil.`}
-      />
+      <Motivation text={pageData.landing_motivation} />
     </>
-  )
+  );
 }

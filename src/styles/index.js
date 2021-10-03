@@ -1,19 +1,36 @@
-import respond from './respond'
-import {fonts} from './fonts'
-import { ButtonPrimary, ButtonPlane, ButtonRound } from './buttons'
-import {Icon} from './components'
-import {Section, ContainerNarrow, SectionNarrowAnimated} from './containers'
-import {Heading1, Heading2, Text, TextBold} from './typography'
+import respond from "./respond";
+import { fonts } from "./fonts";
+import { ButtonPrimary, ButtonPlane, ButtonRound } from "./buttons";
+import { Icon, Field } from "./components";
+import { Section, ContainerNarrow, SectionNarrowAnimated } from "./containers";
+import {
+  Heading1,
+  Heading3,
+  Heading2,
+  Heading4,
+  Text,
+  TextBold,
+} from "./typography";
 
-export{
+export {
   respond,
   fonts,
   // Buttons
-  ButtonPrimary, ButtonPlane, ButtonRound,
+  ButtonPrimary,
+  ButtonPlane,
+  ButtonRound,
   // Components
   Icon,
+  Field,
   // Containers
-  Section, ContainerNarrow, SectionNarrowAnimated,
+  Section,
+  ContainerNarrow,
+  SectionNarrowAnimated,
   // Typography
-  Heading1, Heading2, Text, TextBold,
-}
+  Heading1,
+  Heading3,
+  Heading2,
+  Heading4,
+  Text,
+  TextBold,
+};
